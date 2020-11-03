@@ -1,0 +1,36 @@
+
+<form method="GET" action="/search">
+
+<h2>
+Search results for "{{this.recs}}"
+</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">app id</th>
+      <th scope="col">name</th>
+      <th scope="col">category</th>
+      <th scope="col">rating</th>
+      <th scope="col">installs</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#if hascontent}}
+    {{#each recs}}
+    <tr>
+      <td>{{this.app_id}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.category}}</td>
+      <td>{{this.rating}}</td>
+      <td>{{this.installs}}</td>
+    </tr>
+    {{/each}}
+    {{else}}
+        <h3>No results</h3>
+    {{/if}}
+  </tbody>
+</table>
+
+
+</form>
